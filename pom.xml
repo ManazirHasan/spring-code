@@ -23,6 +23,13 @@
             <artifactId>spring-context</artifactId>
             <version>5.3.23</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.24</version>
+        </dependency>
+
     </dependencies>
     <repositories>
         <repository>
@@ -36,4 +43,20 @@
             <url>http://repo.spring.io/milestone/</url>
         </repository>
     </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>-->
+            </plugin>
+        </plugins>
+    </build>
 </project>
